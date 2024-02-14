@@ -11,9 +11,16 @@ Nathan Davis
 using namespace std;
 
 int main() {
-    
-    
+    int length,width,area;
+    // Ask for width and length or first rect
+    cout << "Width: ";
+    cin >>  width;
+    cout << "Length: ";
+    cin >> length;
+    area = length * width;
+    cout << "Area: " << area;
 
-    cout << string( 5 ,'\n' );
+
+    cout << string( 3 ,'\n' );
     return 0;
 }
