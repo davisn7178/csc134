@@ -11,14 +11,34 @@ Nathan Davis
 using namespace std;
 
 int main() {
-    int length,width,area;
+    int length1,width1,area1;
+    int length2,width2,area2;
     // Ask for width and length or first rect
     cout << "Width: ";
-    cin >>  width;
+    cin >>  width1;
     cout << "Length: ";
-    cin >> length;
-    area = length * width;
-    cout << "Area: " << area;
+    cin >> length1;
+    area1 = length1 * width1;
+    cout << "Area: " << area1;
+
+    cout << "\n\n";
+
+    cout << "Width: ";
+    cin >>  width2;
+    cout << "Length: ";
+    cin >> length2;
+    area2 = length2 * width2;
+    cout << "Area: " << area2;
+
+    cout << "\n\n";
+
+    if (area1 > area2) {
+        cout << "The first rectangle has a larger area";
+    } else if (area1 == area2) {
+        cout << "The two rectangles have the same area";
+    } else {
+        cout << "The second rectangle has a larger area";
+    }
 
 
     cout << string( 3 ,'\n' );
