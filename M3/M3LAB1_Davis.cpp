@@ -13,11 +13,10 @@ using namespace std;
 void button1();
 void button2();
 void button3();
+string choice = "";
+
 
 int main() {
-
-  string choice = "";
-
 
   cout << "Infront of you are three buttons" << endl;
   cout << "One grants immortality" << endl;
@@ -26,17 +25,17 @@ int main() {
   cout << "Make your choice: ";
   cin >> choice;
 
-  if ("1" == choice || "Button 1" == choice || "button 1" == choice) {
+  if ("1" == choice) {
     button1();
-  } else if ("2" == choice || "Button 2" == choice || "button 2" == choice) {
+  } else if ("2" == choice) {
     button2();
-  } else if ("3" == choice || "Button 3" == choice || "button 3" == choice) {
+  } else if ("3" == choice) {
     button3();
   } else {
-    cout << "You must make a choice between the three buttons, there is no other way: " << endl;
-    cin >> choice;
+    cout << "You decide its not worth it";
   }
 
+  cout << string( 2 , '\n');
   return 0;
 
 }
@@ -44,6 +43,13 @@ int main() {
 void button1() {
   cout << "You Press Button 1" << endl;
   cout << "You are alive, although unsure of the outcome..." << endl;
+  cout << "Would you like to find out? ";
+  cin >> choice;
+   if (choice == "yes" || choice == "Yes" || choice == "YES") {
+    cout << "...";
+ } else {
+    cout << "After some time you become certain of the outcome";
+ }
 }
 
 void button2() {
@@ -54,4 +60,12 @@ void button2() {
 void button3() {
  cout << "You Press Button 3" << endl;
  cout << "You are alive, although unsure of the outcome..." << endl;
+ cout << "Would you like to find out? ";
+ cin >> choice;
+ if (choice == "yes" || choice == "Yes" || choice == "YES") {
+    cout << "You are immortal";
+ } else {
+    cout << "After some time you become certain of the outcome";
+ }
+ 
 }
