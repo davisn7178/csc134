@@ -23,7 +23,22 @@ int main() {
     cout << "\n";
 
     cout << "You rolled a " << dice1 << " and a " << dice2 << endl;
-    
+
+    if (diceTotal == 2 || diceTotal == 3 || diceTotal == 12) {
+        cout << "Craps!";
+    } else if (diceTotal == 4 || diceTotal == 10) {
+        cout << "Points: " << diceTotal << "\nOdds: 2/1";
+    } else if (diceTotal == 5 || diceTotal == 9) {
+        cout << "Points: " << diceTotal << "\nOdds: 3/2";
+    } else if (diceTotal == 6 || diceTotal == 8) {
+        cout << "Points: " << diceTotal << "\nOdds: 6/5";
+    } else if (diceTotal == 7 || diceTotal == 11) {
+        cout << "You Win!";
+    } else {
+        cout << "error";
+        return 0;
+    }
+
     cout << string( 3 ,'\n' );
     return 0;
 }
@@ -47,9 +62,9 @@ void draw() {
                 line4 = line4 + "│       │  ";
                 break;
             case 2:
-                line2 = line2 + "│   ●   │  ";
-                line3 = line3 + "│       │  ";
-                line4 = line4 + "│   ●   │  ";
+                line2 = line2 + "│       │  ";
+                line3 = line3 + "│ ●   ● │  ";
+                line4 = line4 + "│       │  ";
                 break;
             case 3:
                 line2 = line2 + "│ ●     │  ";
