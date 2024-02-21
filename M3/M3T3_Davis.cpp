@@ -44,7 +44,7 @@ int main() {
 }
 
 void roll() {
-    srand((unsigned int)time(NULL));
+    srand(time(NULL));
     dice1 = rand() % 6 + 1;
     dice2 = rand() % 6 + 1;
 }
