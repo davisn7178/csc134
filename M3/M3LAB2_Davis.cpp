@@ -12,7 +12,7 @@ using namespace std;
 
 int main() {
 
-    int gradeNum = -1;
+    int gradeNum = 0;
     string letter = "";
     cout << "Input Numerical Grade: ";    
     cin >> gradeNum;
