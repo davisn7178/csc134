@@ -8,6 +8,7 @@ Nathan Davis
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <cstdlib>
 using namespace std;
 
 int main() {
@@ -88,7 +89,19 @@ int main() {
     // Question 4
     cout << "\nQuestion 4 -\n\n";
 
-    
+    srand(time(NULL));
+    int num1 = rand() % 50 + 1;
+    int num2 = rand() % 50 + 1;
+    int answer = 0;
+    cout << "What is " << num1 << " + " << num2 << "?" << endl;
+
+    cin >> answer;
+
+    if (answer == num1 + num2) {
+        cout << "Correct";
+    } else {
+        cout << "Incorrect";
+    }
 
     cout << string( 3 ,'\n' );
     return 0;
