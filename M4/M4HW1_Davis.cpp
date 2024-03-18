@@ -30,9 +30,8 @@ int main() {
     
     cout << string( 2 ,'\n' );
     
-    for(int i = 0; i < 12; i+1) {
+    for(int i = 0; i < 13; i++) {
         cout << input << " * " << i << " = " << input * i << endl;
-        i+1;
     }
 
 
